@@ -45,7 +45,7 @@ const morgan = require('morgan');
 const User = require('./models/user');
 
 // const MONGODB_URI = `mongodb://localhost:27017/${process.env.MONGO_DEFAULT_DATABASE}`;
-const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@shop.uudhcdb.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@shop.uudhcdb.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?ssl=true`;
 
 const app = express();
 const store = new MongoDBStore({
